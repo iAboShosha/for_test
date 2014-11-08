@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        var bin=[1.0,0,0,1,1,0,1,1,0]
+        var last1=false;
+        for(var i=bin.length-1;i>0;i--){
+            bin[i]= last1?(bin[i]=bin[i]==1?0:1):bin[i]
+            last1=(bin[i]==1)
+        }
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

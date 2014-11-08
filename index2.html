@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <script>
+
+        function show(){
+            var txt=document.getElementById('welcome').value;
+
+            var table=document.getElementById('table')
+            var row =table.insertRow(-1);
+            var cell=row.insertCell(0);
+            cell.innerText='welcome '+ txt  ;
+            document.getElementById('welcome').value='';
+            document.getElementById('counts').innerText="Counts: "+ (table.rows.length-1);
+            document.getElementById('welcome').focus();
+
+
+        }
+
+        function onkeypressE(){
+            if(event.keyCode==13)
+            show();
+
+        }
+    </script>
+
+
+
+
+</head>
+<body>
+
+
+<input type="text" id="welcome" onkeypress="onkeypressE()">
+
+
+
+<input type="button" onclick="show()" value="Add">
+
+<table id="table">
+    <tr>
+        <th>Name</th>
+    </tr>
+
+</table>
+<div id="counts"></div>
+
+
+
+</body>
+</html>
